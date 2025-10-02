@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.1](https://github.com/pavankommi/rndtpkr/compare/v4.0.0...v4.0.1) (2025-10-02)
+
+
+### Bug Fixes
+
+* improve wheel picker with 7x looping, type coercion, and bug fixes ([c871e12](https://github.com/pavankommi/rndtpkr/commit/c871e12afde0576681440889339d63b33b5bf2da))
+* improve wheel picker with 7x looping, type coercion, and bug fixes ([bb54c2c](https://github.com/pavankommi/rndtpkr/commit/bb54c2c973cc9cea651ae83db846a280a01aded4))
+
 ## [4.0.0](https://github.com/pavankommi/rndtpkr/compare/v3.1.3...v4.0.0) (2025-10-02)
 
 
