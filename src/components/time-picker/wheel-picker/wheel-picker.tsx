@@ -37,6 +37,12 @@ interface Props {
   enableLooping?: boolean;
 }
 
+const REPEAT = 7; // Odd number ensures middle block exists
+const MID_BLOCK = Math.floor(REPEAT / 2);
+
+// Wrap index into valid range [0, len-1]
+const wrap = (i: number, len: number) => (len ? ((i % len) + len) % len : 0);
+
 const WheelPicker: React.FC<Props> = ({
   value,
   options,
@@ -58,12 +64,24 @@ const WheelPicker: React.FC<Props> = ({
   enableLooping = false,
 }) => {
   const momentumStarted = useRef(false);
-  const selectedIndex = options.findIndex((item) => item.value === value);
-
   const flatListRef = useRef<FlatList>(null);
-  const [scrollY] = useState(new Animated.Value(selectedIndex * itemHeight));
+  const hasEmittedRef = useRef(false); // Prevent mount-time emission
+
+  // Find selected index, with ceiling rounding for non-exact matches
+  // Use numeric comparison to handle mixed types (e.g., "00" vs 0)
+  const foundIndex = options.findIndex(
+    (item) => Number(item.value) === Number(value)
+  );
+  let baseSelectedIndex = foundIndex;
+  if (foundIndex < 0) {
+    const nextIndex = options.findIndex(
+      (item) => Number(item.value) >= Number(value)
+    );
+    baseSelectedIndex = nextIndex >= 0 ? nextIndex : 0;
+  }
 
   const containerHeight = (1 + visibleRest * 2) * itemHeight;
+
   const paddedOptions = useMemo(() => {
     if (!enableLooping) {
       // Original behavior: add null padding
@@ -75,8 +93,17 @@ const WheelPicker: React.FC<Props> = ({
       return array;
     }
 
-    // NEW: Triple the array for seamless looping
-    return [...options, ...options, ...options];
+    // Looping: repeat 7 times for scroll room in both directions
+    const core: (PickerOption | null)[] = [];
+    for (let b = 0; b < REPEAT; b++) {
+      core.push(...options);
+    }
+    // Add null padding
+    for (let i = 0; i < visibleRest; i++) {
+      core.unshift(null);
+      core.push(null);
+    }
+    return core;
   }, [options, visibleRest, enableLooping]);
 
   const offsets = useMemo(
@@ -84,12 +111,42 @@ const WheelPicker: React.FC<Props> = ({
     [paddedOptions, itemHeight]
   );
 
+  const [scrollY] = useState(new Animated.Value(0));
   const currentScrollIndex = useMemo(
     () => Animated.add(Animated.divide(scrollY, itemHeight), visibleRest),
     [visibleRest, scrollY, itemHeight]
   );
 
+  // Calculate initial offset for looping mode (middle block)
+  const baseLen = options.length;
+  const initialTopIndex = enableLooping
+    ? MID_BLOCK * baseLen + baseSelectedIndex
+    : baseSelectedIndex;
+  const initialOffset = initialTopIndex * itemHeight;
+
+  // Seed position on mount using offset (more reliable than initialScrollIndex)
+  useEffect(() => {
+    if (enableLooping) {
+      flatListRef.current?.scrollToOffset({
+        offset: initialOffset,
+        animated: false,
+      });
+    } else {
+      flatListRef.current?.scrollToIndex({
+        index: baseSelectedIndex,
+        animated: Platform.OS === 'ios',
+      });
+    }
+    // Mark as emitted after initial scroll to prevent onChange on mount
+    setTimeout(() => {
+      hasEmittedRef.current = true;
+    }, 100);
+  }, [initialOffset, baseSelectedIndex, enableLooping]);
+
   const handleScrollEnd = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+    // Ignore first settle to prevent mount-time emission
+    if (!hasEmittedRef.current) return;
+
     if (!enableLooping) {
       // Original non-looping behavior
       const offsetY = Math.min(
@@ -103,38 +160,25 @@ const WheelPicker: React.FC<Props> = ({
         index++;
       }
 
-      if (index !== selectedIndex) {
-        onChange(options[index]?.value || 0);
+      if (index !== baseSelectedIndex) {
+        const option = options[index];
+        if (option?.value != null) onChange(Number(option.value));
       }
       return;
     }
 
-    // NEW: Looping behavior
-    const offsetY = event.nativeEvent.contentOffset.y;
-    let index = Math.round(offsetY / itemHeight);
-
-    // Check if we're in first or third segment and need to reposition
-    if (index < options.length) {
-      // In first segment, jump to middle segment
-      const targetIndex = index + options.length;
-      flatListRef.current?.scrollToIndex({
-        index: targetIndex,
-        animated: false,
-      });
-      index = targetIndex;
-    } else if (index >= options.length * 2) {
-      // In third segment, jump back to middle
-      const targetIndex = index - options.length;
-      flatListRef.current?.scrollToIndex({
-        index: targetIndex,
-        animated: false,
-      });
-      index = targetIndex;
+    // Looping: wrap index mathematically, no recentering needed
+    const offsetY = Math.max(0, event.nativeEvent.contentOffset.y);
+    let topIdx = Math.floor(offsetY / itemHeight);
+    if (offsetY % itemHeight > itemHeight / 2) {
+      topIdx++;
     }
 
-    // Calculate the actual value index (modulo)
-    const valueIndex = index % options.length;
-    onChange(options[valueIndex]?.value || 0);
+    const baseIdx = wrap(topIdx, baseLen);
+    if (baseIdx !== baseSelectedIndex) {
+      const option = options[baseIdx];
+      if (option?.value != null) onChange(Number(option.value));
+    }
   };
 
   const handleMomentumScrollBegin = () => {
@@ -151,54 +195,16 @@ const WheelPicker: React.FC<Props> = ({
   const handleScrollEndDrag = (
     event: NativeSyntheticEvent<NativeScrollEvent>
   ) => {
-    // Capture the offset value immediately
     const offsetY = event.nativeEvent.contentOffset?.y;
-
-    // We'll start a short timer to see if momentum scroll begins
     setTimeout(() => {
-      // If momentum scroll hasn't started within the timeout,
-      // then it was a slow scroll that won't trigger momentum
       if (!momentumStarted.current && offsetY !== undefined) {
-        // Create a synthetic event with just the data we need
         const syntheticEvent = {
-          nativeEvent: {
-            contentOffset: { y: offsetY },
-          },
+          nativeEvent: { contentOffset: { y: offsetY } },
         };
         handleScrollEnd(syntheticEvent as any);
       }
     }, 50);
   };
-
-  useEffect(() => {
-    if (selectedIndex < 0 || selectedIndex >= options.length) {
-      throw new Error(
-        `Selected index ${selectedIndex} is out of bounds [0, ${
-          options.length - 1
-        }]`
-      );
-    }
-  }, [selectedIndex, options]);
-
-  /**
-   * If selectedIndex is changed from outside (not via onChange) we need to scroll to the specified index.
-   * This ensures that what the user sees as selected in the picker always corresponds to the value state.
-   */
-  useEffect(() => {
-    if (!enableLooping) {
-      flatListRef.current?.scrollToIndex({
-        index: selectedIndex,
-        animated: Platform.OS === 'ios',
-      });
-    } else {
-      // For looping, scroll to middle segment
-      const middleIndex = selectedIndex + options.length;
-      flatListRef.current?.scrollToIndex({
-        index: middleIndex,
-        animated: Platform.OS === 'ios',
-      });
-    }
-  }, [selectedIndex, itemHeight, enableLooping, options.length]);
 
   return (
     <View
@@ -231,9 +237,6 @@ const WheelPicker: React.FC<Props> = ({
         onMomentumScrollEnd={handleMomentumScrollEnd}
         snapToOffsets={offsets}
         decelerationRate={decelerationRate}
-        initialScrollIndex={
-          enableLooping ? selectedIndex + options.length : selectedIndex
-        }
         getItemLayout={(_, index) => ({
           length: itemHeight,
           offset: itemHeight * index,
