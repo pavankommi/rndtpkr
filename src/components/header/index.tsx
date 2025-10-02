@@ -4,7 +4,7 @@ import type { HeaderProps, NavigationProps } from './types';
 import PrevButton from './prev-button';
 import NextButton from './next-button';
 import Selectors from './selectors';
-import { isEqual } from 'lodash';
+import { dequal as isEqual } from 'dequal';
 
 const createDefaultStyles = (isRTL: boolean) =>
   StyleSheet.create({

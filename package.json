@@ -1,17 +1,22 @@
 {
-  "name": "react-native-ui-datepicker",
-  "version": "3.1.2",
-  "description": "Customizable date picker for React Native",
+  "name": "rndtpkr",
+  "version": "1.0.0",
+  "description": "Lightweight React Native date/time picker with auto system format, looping wheels, and minute stepping",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
   "exports": {
-    "import": "./lib/module/index.js",
-    "require": "./lib/commonjs/index.js",
-    "types": "./lib/typescript/index.d.ts"
+    ".": {
+      "types": "./lib/typescript/index.d.ts",
+      "react-native": "./src/index.ts",
+      "import": "./lib/module/index.js",
+      "require": "./lib/commonjs/index.js",
+      "default": "./lib/commonjs/index.js"
+    }
   },
+  "sideEffects": false,
   "files": [
     "src",
     "lib",
@@ -44,11 +49,9 @@
     "react-native",
     "ios",
     "android",
-    "react-native-ui-datetpicker",
     "react-native-datetime",
     "react-native-datetime-picker",
-    "react-native-datetpicker",
-    "react-native-datet-picker",
+    "react-native-datepicker",
     "react-native-timepicker",
     "react-native-time-picker",
     "react-native-calendar",
@@ -56,65 +59,79 @@
     "datetime",
     "datetime-picker",
     "datepicker",
-    "datet-picker",
     "timepicker",
     "time-picker",
     "calendar",
-    "daterange"
+    "daterange",
+    "wheel-picker",
+    "date-range"
   ],
-  "repository": "https://github.com/farhoudshapouran/react-native-ui-datepicker",
-  "author": "Farhoud Shapouran <shapouran@gmail.com> (https://github.com/farhoudshapouran)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavankommi/rndtpkr.git"
+  },
+  "author": "Pavan Kommi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/farhoudshapouran/react-native-ui-datepicker/issues"
+    "url": "https://github.com/pavankommi/rndtpkr/issues"
   },
-  "homepage": "https://github.com/farhoudshapouran/react-native-ui-datepicker#readme",
+  "homepage": "https://github.com/pavankommi/rndtpkr#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public",
+    "provenance": true
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.0.2",
-    "@evilmartians/lefthook": "^1.2.2",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@evilmartians/lefthook": "^1.13.6",
     "@react-native-community/eslint-config": "^3.0.2",
     "@react-native/eslint-config": "^0.77.0",
-    "@release-it/conventional-changelog": "^5.0.0",
+    "@release-it/conventional-changelog": "^10.0.1",
     "@testing-library/jest-native": "^5.4.3",
     "@testing-library/react-native": "^12.3.2",
-    "@types/jest": "^29.5.14",
-    "@types/lodash": "^4.14.202",
+    "@types/jest": "^30.0.0",
     "@types/react": "18.2.0",
-    "@types/react-native": "0.72.0",
+    "@types/react-native": "^0.72.8",
     "@types/react-test-renderer": "^18.0.0",
-    "@typescript-eslint/parser": "^8.24.1",
-    "commitlint": "^17.0.2",
-    "del-cli": "^5.0.0",
-    "eslint": "^9.20.1",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-react-hooks": "^5.1.0",
+    "@typescript-eslint/parser": "^8.45.0",
+    "commitlint": "^20.1.0",
+    "del-cli": "^7.0.0",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-native": "^5.0.0",
-    "jest": "^28.1.3",
+    "jest": "^30.2.0",
     "pod-install": "^0.1.0",
-    "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.11",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
     "react": "18.2.0",
     "react-native": "0.72.0",
     "react-native-builder-bob": "^0.20.0",
     "react-test-renderer": "18.2.0",
     "ts-node": "^10.9.1",
-    "typescript": "^5.7.3"
+    "typescript": "^5.9.3"
   },
   "resolutions": {
     "@types/react": "18.2.0",
-    "@types/react-native": "0.72.0"
+    "@types/react-native": "^0.72.8"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
+    "react": ">=16.8.0",
+    "react-native": ">=0.64.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": false
+    },
+    "react-native": {
+      "optional": false
+    }
   },
   "engines": {
     "node": ">= 18"
   },
+  "packageManager": "npm@10.8.2",
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -167,9 +184,9 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "dayjs": "^1.11.13",
-    "jalali-plugin-dayjs": "^1.1.4",
-    "lodash": "^4.17.21",
-    "tailwind-merge": "^3.0.1"
+    "dayjs": "^1.11.18",
+    "dequal": "^2.0.3",
+    "react-native-localize": "^3.5.2",
+    "tailwind-merge": "^3.3.1"
   }
 }

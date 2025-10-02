@@ -1,15 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`COMMON TESTS should render with default options 1`] = `
 <View
   className=""
-  style={Object {}}
+  style={{}}
   testID="calendar"
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingVertical": 3,
         },
         undefined,
@@ -18,7 +18,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "gap": 20,
@@ -31,7 +31,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
         accessibilityLabel="Prev"
         accessibilityRole="button"
         accessibilityState={
-          Object {
+          {
             "busy": undefined,
             "checked": undefined,
             "disabled": false,
@@ -40,7 +40,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
           }
         }
         accessibilityValue={
-          Object {
+          {
             "max": undefined,
             "min": undefined,
             "now": undefined,
@@ -63,11 +63,11 @@ exports[`COMMON TESTS should render with default options 1`] = `
       >
         <View
           style={
-            Array [
-              Object {
+            [
+              {
                 "padding": 4,
               },
-              Object {
+              {
                 "marginLeft": 0,
                 "marginRight": 3,
               },
@@ -77,16 +77,16 @@ exports[`COMMON TESTS should render with default options 1`] = `
         >
           <Image
             source={
-              Object {
-                "testUri": "../../../src/assets/images/arrow_left.png",
+              {
+                "testUri": "../../../src/assets/images/left-chevron-svgrepo-com.svg",
               }
             }
             style={
-              Object {
+              {
                 "height": 14,
                 "tintColor": "hsl(240 10% 3.9%)",
-                "transform": Array [
-                  Object {
+                "transform": [
+                  {
                     "rotate": "0deg",
                   },
                 ],
@@ -98,13 +98,13 @@ exports[`COMMON TESTS should render with default options 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
+          [
+            {
               "alignItems": "center",
               "flex": 1,
               "flexDirection": "row",
             },
-            Object {
+            {
               "justifyContent": "space-evenly",
             },
           ]
@@ -112,7 +112,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "flexDirection": "row",
               "gap": 5,
@@ -123,7 +123,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             accessibilityLabel="March"
             accessibilityRole="button"
             accessibilityState={
-              Object {
+              {
                 "busy": undefined,
                 "checked": undefined,
                 "disabled": undefined,
@@ -132,7 +132,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               }
             }
             accessibilityValue={
-              Object {
+              {
                 "max": undefined,
                 "min": undefined,
                 "now": undefined,
@@ -163,7 +163,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             accessibilityLabel="2024"
             accessibilityRole="button"
             accessibilityState={
-              Object {
+              {
                 "busy": undefined,
                 "checked": undefined,
                 "disabled": undefined,
@@ -172,7 +172,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               }
             }
             accessibilityValue={
-              Object {
+              {
                 "max": undefined,
                 "min": undefined,
                 "now": undefined,
@@ -195,8 +195,8 @@ exports[`COMMON TESTS should render with default options 1`] = `
           >
             <View
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "alignItems": "center",
                     "justifyContent": "center",
                   },
@@ -215,7 +215,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
         accessibilityLabel="Next"
         accessibilityRole="button"
         accessibilityState={
-          Object {
+          {
             "busy": undefined,
             "checked": undefined,
             "disabled": false,
@@ -224,7 +224,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
           }
         }
         accessibilityValue={
-          Object {
+          {
             "max": undefined,
             "min": undefined,
             "now": undefined,
@@ -247,11 +247,11 @@ exports[`COMMON TESTS should render with default options 1`] = `
       >
         <View
           style={
-            Array [
-              Object {
+            [
+              {
                 "padding": 4,
               },
-              Object {
+              {
                 "marginLeft": 3,
                 "marginRight": 0,
               },
@@ -261,16 +261,16 @@ exports[`COMMON TESTS should render with default options 1`] = `
         >
           <Image
             source={
-              Object {
-                "testUri": "../../../src/assets/images/arrow_right.png",
+              {
+                "testUri": "../../../src/assets/images/right-chevron-svgrepo-com.svg",
               }
             }
             style={
-              Object {
+              {
                 "height": 14,
                 "tintColor": "hsl(240 10% 3.9%)",
-                "transform": Array [
-                  Object {
+                "transform": [
+                  {
                     "rotate": "0deg",
                   },
                 ],
@@ -284,14 +284,14 @@ exports[`COMMON TESTS should render with default options 1`] = `
   </View>
   <View
     style={
-      Object {
+      {
         "height": 300,
       }
     }
   >
     <View
       style={
-        Object {
+        {
           "height": "100%",
           "width": "100%",
         }
@@ -300,8 +300,8 @@ exports[`COMMON TESTS should render with default options 1`] = `
     >
       <View
         style={
-          Array [
-            Object {
+          [
+            {
               "alignItems": "center",
               "flexDirection": "row",
               "height": 25,
@@ -313,8 +313,8 @@ exports[`COMMON TESTS should render with default options 1`] = `
       >
         <View
           style={
-            Array [
-              Object {
+            [
+              {
                 "alignItems": "center",
                 "justifyContent": "center",
                 "width": "14.271428571428572%",
@@ -329,8 +329,8 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Array [
-              Object {
+            [
+              {
                 "alignItems": "center",
                 "justifyContent": "center",
                 "width": "14.271428571428572%",
@@ -345,8 +345,8 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Array [
-              Object {
+            [
+              {
                 "alignItems": "center",
                 "justifyContent": "center",
                 "width": "14.271428571428572%",
@@ -361,8 +361,8 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Array [
-              Object {
+            [
+              {
                 "alignItems": "center",
                 "justifyContent": "center",
                 "width": "14.271428571428572%",
@@ -377,8 +377,8 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Array [
-              Object {
+            [
+              {
                 "alignItems": "center",
                 "justifyContent": "center",
                 "width": "14.271428571428572%",
@@ -393,8 +393,8 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Array [
-              Object {
+            [
+              {
                 "alignItems": "center",
                 "justifyContent": "center",
                 "width": "14.271428571428572%",
@@ -409,8 +409,8 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Array [
-              Object {
+            [
+              {
                 "alignItems": "center",
                 "justifyContent": "center",
                 "width": "14.271428571428572%",
@@ -426,8 +426,8 @@ exports[`COMMON TESTS should render with default options 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
+          [
+            {
               "alignContent": "flex-start",
               "flexDirection": "row",
               "flexWrap": "wrap",
@@ -441,50 +441,50 @@ exports[`COMMON TESTS should render with default options 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         />
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         />
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         />
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         />
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         />
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -495,7 +495,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="1"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -504,7 +504,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -525,7 +525,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -534,7 +534,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 1
               </Text>
@@ -543,15 +543,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -562,7 +562,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="2"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -571,7 +571,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -592,7 +592,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -601,7 +601,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 2
               </Text>
@@ -610,15 +610,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -629,7 +629,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="3"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -638,7 +638,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -659,7 +659,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -668,7 +668,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 3
               </Text>
@@ -677,15 +677,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -696,7 +696,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="4"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -705,7 +705,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -726,7 +726,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -735,7 +735,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 4
               </Text>
@@ -744,15 +744,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -763,7 +763,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="5"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -772,7 +772,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -793,7 +793,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -802,7 +802,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 5
               </Text>
@@ -811,15 +811,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -830,7 +830,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="6"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -839,7 +839,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -860,7 +860,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -869,7 +869,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 6
               </Text>
@@ -878,15 +878,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -897,7 +897,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="7"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -906,7 +906,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -927,7 +927,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -936,7 +936,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 7
               </Text>
@@ -945,15 +945,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -964,7 +964,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="8"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -973,7 +973,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -994,7 +994,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1003,7 +1003,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 8
               </Text>
@@ -1012,15 +1012,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1031,7 +1031,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="9"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1040,7 +1040,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1061,7 +1061,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1070,7 +1070,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 9
               </Text>
@@ -1079,15 +1079,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1098,7 +1098,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="10"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1107,7 +1107,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1128,7 +1128,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1137,7 +1137,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 10
               </Text>
@@ -1146,15 +1146,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1165,7 +1165,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="11"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1174,7 +1174,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1195,7 +1195,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1204,7 +1204,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 11
               </Text>
@@ -1213,15 +1213,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1232,7 +1232,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="12"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1241,7 +1241,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1262,7 +1262,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1271,7 +1271,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 12
               </Text>
@@ -1280,15 +1280,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1299,7 +1299,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="13"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1308,7 +1308,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1329,7 +1329,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1338,7 +1338,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 13
               </Text>
@@ -1347,15 +1347,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1366,7 +1366,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="14"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1375,7 +1375,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1396,7 +1396,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1405,7 +1405,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 14
               </Text>
@@ -1414,15 +1414,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1433,7 +1433,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="15"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1442,7 +1442,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1463,7 +1463,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1472,7 +1472,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 15
               </Text>
@@ -1481,15 +1481,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1500,7 +1500,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="16"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1509,7 +1509,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1530,7 +1530,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1539,7 +1539,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 16
               </Text>
@@ -1548,15 +1548,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1567,7 +1567,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="17"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1576,7 +1576,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1597,7 +1597,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1606,7 +1606,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 17
               </Text>
@@ -1615,15 +1615,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1634,7 +1634,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="18"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1643,7 +1643,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1664,7 +1664,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1673,7 +1673,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 18
               </Text>
@@ -1682,15 +1682,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1701,7 +1701,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="19"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1710,7 +1710,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1731,7 +1731,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1740,7 +1740,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 19
               </Text>
@@ -1749,15 +1749,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1768,7 +1768,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="20"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1777,7 +1777,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1798,7 +1798,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1807,7 +1807,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 20
               </Text>
@@ -1816,15 +1816,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1835,7 +1835,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="21"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1844,7 +1844,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1865,7 +1865,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1874,7 +1874,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 21
               </Text>
@@ -1883,15 +1883,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1902,7 +1902,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="22"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1911,7 +1911,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1932,7 +1932,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -1941,7 +1941,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 22
               </Text>
@@ -1950,15 +1950,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -1969,7 +1969,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="23"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -1978,7 +1978,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -1999,7 +1999,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -2008,7 +2008,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 23
               </Text>
@@ -2017,15 +2017,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -2036,7 +2036,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="24"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -2045,7 +2045,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -2066,7 +2066,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -2075,7 +2075,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 24
               </Text>
@@ -2084,15 +2084,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -2103,7 +2103,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="25"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -2112,7 +2112,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -2133,7 +2133,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -2142,7 +2142,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 25
               </Text>
@@ -2151,15 +2151,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -2170,7 +2170,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="26"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -2179,7 +2179,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -2200,7 +2200,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -2209,7 +2209,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 26
               </Text>
@@ -2218,15 +2218,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -2237,7 +2237,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="27"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -2246,7 +2246,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -2267,7 +2267,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -2276,7 +2276,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 27
               </Text>
@@ -2285,15 +2285,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -2304,7 +2304,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="28"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -2313,7 +2313,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -2334,7 +2334,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -2343,7 +2343,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 28
               </Text>
@@ -2352,15 +2352,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -2371,7 +2371,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="29"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -2380,7 +2380,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -2401,7 +2401,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -2410,7 +2410,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 29
               </Text>
@@ -2419,15 +2419,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -2438,7 +2438,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="30"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -2447,7 +2447,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -2468,7 +2468,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -2477,7 +2477,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 30
               </Text>
@@ -2486,15 +2486,15 @@ exports[`COMMON TESTS should render with default options 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "width": "14.271428571428572%",
             }
           }
         >
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "minHeight": 45.833333333333336,
                 },
                 undefined,
@@ -2505,7 +2505,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               accessibilityLabel="31"
               accessibilityRole="button"
               accessibilityState={
-                Object {
+                {
                   "busy": undefined,
                   "checked": undefined,
                   "disabled": false,
@@ -2514,7 +2514,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
                 }
               }
               accessibilityValue={
-                Object {
+                {
                   "max": undefined,
                   "min": undefined,
                   "now": undefined,
@@ -2535,7 +2535,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flex": 1,
                   "justifyContent": "center",
@@ -2544,7 +2544,7 @@ exports[`COMMON TESTS should render with default options 1`] = `
             >
               <Text
                 className=""
-                style={Object {}}
+                style={{}}
               >
                 31
               </Text>

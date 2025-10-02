@@ -12,7 +12,7 @@ import {
 
 export type DateType = string | number | Dayjs | Date | null | undefined;
 
-export type CalendarType = 'gregory' | 'jalali';
+export type CalendarType = 'gregory';
 
 export type CalendarMode = 'single' | 'range' | 'multiple';
 
@@ -30,7 +30,7 @@ export type LocalState = {
   calendarView: CalendarViews;
   currentDate: DateType; // used for latest state of calendar based on Month and Year
   currentYear: number;
-  isRTL: boolean; // used for jalali or i18n RTL detection
+  isRTL: boolean; // used for i18n RTL detection
 };
 
 export type CalendarAction = {
@@ -154,6 +154,9 @@ export interface DatePickerBaseProps {
   showOutsideDays?: boolean;
   timePicker?: boolean;
   use12Hours?: boolean;
+  autoSystemFormat?: boolean;
+  minuteStep?: 5 | 10 | 15 | 30;
+  enableLooping?: boolean;
   initialView?: CalendarViews;
   containerHeight?: number;
   weekdaysHeight?: number;
@@ -178,19 +181,7 @@ export interface DatePickerBaseProps {
   onYearChange?: (year: number) => void;
 }
 
-export type Numerals =
-  | 'latn'
-  | 'arab'
-  | 'arabext'
-  | 'deva'
-  | 'beng'
-  | 'guru'
-  | 'gujr'
-  | 'orya'
-  | 'tamldec'
-  | 'telu'
-  | 'knda'
-  | 'mlym';
+export type Numerals = 'latn';
 
 export type PickerOption = {
   value: number | string;

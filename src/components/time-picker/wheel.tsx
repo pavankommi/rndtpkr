@@ -10,6 +10,7 @@ type WheelProps = {
   items: PickerOption[];
   styles?: Styles;
   classNames?: ClassNames;
+  enableLooping?: boolean;
 };
 
 const Wheel = (props: WheelProps) => {

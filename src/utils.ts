@@ -5,12 +5,11 @@ import type {
   CalendarMonth,
   CalendarWeek,
   Numerals,
-  CalendarType,
 } from './types';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { useRef } from 'react';
-import { isEqual } from 'lodash';
+import { dequal as isEqual } from 'dequal';
 import { numeralSystems } from './numerals';
 
 export const CALENDAR_FORMAT = 'YYYY-MM-DD HH:mm';
@@ -63,17 +62,9 @@ export const getMonthName = (month: number) => dayjs.months()[month];
  *
  * @returns months array
  */
-export const getMonthsArray = ({
-  calendar,
-  locale,
-}: {
-  calendar: CalendarType;
-  locale: string;
-}): CalendarMonth[] => {
-  const monthNames =
-    calendar === 'jalali' ? getJalaliMonths(locale) : dayjs.months();
-  const monthShortNames =
-    calendar === 'jalali' ? getJalaliMonths(locale) : dayjs.monthsShort();
+export const getMonthsArray = (): CalendarMonth[] => {
+  const monthNames = dayjs.months();
+  const monthShortNames = dayjs.monthsShort();
 
   return monthNames.map((name, index) => ({
     index,

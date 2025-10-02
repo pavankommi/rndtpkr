@@ -9,6 +9,7 @@ interface WheelProps {
   items: PickerOption[];
   styles?: Styles;
   classNames?: ClassNames;
+  enableLooping?: boolean;
 }
 
 const WheelNative = ({
@@ -17,6 +18,7 @@ const WheelNative = ({
   items,
   styles,
   classNames,
+  enableLooping = false,
 }: WheelProps) => {
   return (
     <WheelPicker
@@ -30,6 +32,7 @@ const WheelNative = ({
       selectedIndicatorStyle={styles?.time_selected_indicator}
       itemHeight={44}
       decelerationRate="fast"
+      enableLooping={enableLooping}
     />
   );
 };

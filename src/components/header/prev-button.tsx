@@ -11,10 +11,10 @@ import { useCalendarContext } from '../../calendar-context';
 import { YEAR_PAGE_SIZE } from '../../utils';
 import { ClassNames, Styles } from '../../types';
 import { UI } from '../../ui';
-import { isEqual } from 'lodash';
+import { dequal as isEqual } from 'dequal';
 import { COLORS } from '../../theme';
 
-const arrow_left = require('../../assets/images/arrow_left.png');
+const arrow_left = require('../../assets/images/left-chevron-svgrepo-com.svg');
 
 type PrevButtonProps = {
   style?: Styles[UI.button_prev];

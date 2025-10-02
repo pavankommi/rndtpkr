@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleProp, TextStyle, Animated, ViewStyle, Text } from 'react-native';
 import styles from './wheel-picker.style';
-import { isEqual } from 'lodash';
+import { dequal as isEqual } from 'dequal';
 import { PickerOption } from 'src/types';
 
 interface ItemProps {

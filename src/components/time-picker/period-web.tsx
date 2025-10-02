@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { ClassNames, Styles } from '../../types';
-import { isEqual } from 'lodash';
+import { dequal as isEqual } from 'dequal';
 
 interface PeriodProps {
   value: string;

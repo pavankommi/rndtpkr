@@ -9,7 +9,7 @@ import {
 } from '../types';
 import { CONTAINER_HEIGHT, WEEKDAYS_HEIGHT } from '../enums';
 import { cn } from '../utils';
-import { isEqual } from 'lodash';
+import { dequal as isEqual } from 'dequal';
 
 interface Props {
   day: CalendarDay;

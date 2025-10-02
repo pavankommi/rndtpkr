@@ -42,6 +42,8 @@ const TimePicker = () => {
     timeZone,
     numerals = 'latn',
     use12Hours,
+    minuteStep,
+    enableLooping = true, // Default to true for time pickers
   } = useCalendarContext();
 
   const hours = useMemo(
@@ -49,7 +51,24 @@ const TimePicker = () => {
     [numerals, use12Hours]
   );
 
-  const minutes = useMemo(() => createNumberList(60, numerals), [numerals]);
+  const minutes = useMemo(() => {
+    if (!minuteStep) {
+      return createNumberList(60, numerals);
+    }
+
+    // Create filtered list based on step
+    const steps: PickerOption[] = [];
+    for (let i = 0; i < 60; i += minuteStep) {
+      steps.push({
+        value: i,
+        text:
+          i < 10
+            ? `${formatNumber(0, numerals)}${formatNumber(i, numerals)}`
+            : `${formatNumber(i, numerals)}`,
+      });
+    }
+    return steps;
+  }, [numerals, minuteStep]);
 
   const { hour, hour12, minute, period } = getParsedDate(date || currentDate);
 
@@ -72,10 +91,15 @@ const TimePicker = () => {
 
   const handleChangeMinute = useCallback(
     (value: number) => {
-      const newDate = dayjs.tz(date, timeZone).minute(value);
+      // Round to nearest step if minuteStep is defined
+      const roundedMinute = minuteStep
+        ? Math.round(value / minuteStep) * minuteStep
+        : value;
+
+      const newDate = dayjs.tz(date, timeZone).minute(roundedMinute);
       onSelectDate(newDate);
     },
-    [date, onSelectDate, timeZone]
+    [date, onSelectDate, timeZone, minuteStep]
   );
 
   const handlePeriodChange = useCallback(
@@ -123,6 +147,7 @@ const TimePicker = () => {
             setValue={handleChangeHour}
             styles={styles}
             classNames={classNames}
+            enableLooping={enableLooping}
           />
         </View>
         <Text style={timePickerTextStyle} className={classNames?.time_label}>
@@ -135,6 +160,7 @@ const TimePicker = () => {
             setValue={handleChangeMinute}
             styles={styles}
             classNames={classNames}
+            enableLooping={enableLooping}
           />
         </View>
       </View>

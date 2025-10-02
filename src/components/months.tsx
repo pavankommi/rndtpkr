@@ -15,8 +15,6 @@ const Months = () => {
     monthsFormat = 'full',
     minDate,
     maxDate,
-    calendar = 'gregory',
-    locale,
     isRTL,
   } = useCalendarContext();
 
@@ -32,7 +30,7 @@ const Months = () => {
   return (
     <View style={containerStyle} testID="month-selector">
       <View style={style.months}>
-        {getMonthsArray({ calendar, locale }).map((item, index) => {
+        {getMonthsArray().map((item, index) => {
           const isSelected = index === month;
 
           const isDisabled = isMonthDisabled(index, currentDate, {
