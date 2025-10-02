@@ -312,9 +312,11 @@ const DateTimePicker = (
     if (mode === 'single') {
       let _date =
         (date &&
-          (timePicker
-            ? dayjs.tz(date, timeZone)
-            : getStartOfDay(dayjs.tz(date, timeZone)))) ??
+          (timeZone === 'UTC'
+            ? dayjs(date)
+            : timePicker
+              ? dayjs.tz(date, timeZone)
+              : getStartOfDay(dayjs.tz(date, timeZone)))) ??
         date;
 
       if (_date && maxDate && dayjs.tz(_date, timeZone).isAfter(maxDate)) {
@@ -337,7 +339,11 @@ const DateTimePicker = (
       }
     } else if (mode === 'range') {
       let start = (
-        startDate ? dayjs.tz(startDate, timeZone) : startDate
+        startDate
+          ? timeZone === 'UTC'
+            ? dayjs(startDate)
+            : dayjs.tz(startDate, timeZone)
+          : startDate
       ) as DateType;
 
       if (start && maxDate && dayjs.tz(start, timeZone).isAfter(maxDate)) {
@@ -348,7 +354,13 @@ const DateTimePicker = (
         start = dayjs.tz(minDate, timeZone);
       }
 
-      let end = (endDate ? dayjs.tz(endDate, timeZone) : endDate) as DateType;
+      let end = (
+        endDate
+          ? timeZone === 'UTC'
+            ? dayjs(endDate)
+            : dayjs.tz(endDate, timeZone)
+          : endDate
+      ) as DateType;
 
       if (end && maxDate && dayjs.tz(end, timeZone).isAfter(maxDate)) {
         end = dayjs.tz(maxDate, timeZone);
