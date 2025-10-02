@@ -10,7 +10,7 @@ import {
 import { sin } from './animated-math';
 import { CONTAINER_HEIGHT } from '../../enums';
 import { ClassNames, Styles, PickerOption } from '../../types';
-import { isEqual } from 'lodash';
+import { dequal as isEqual } from 'dequal';
 
 interface WheelProps {
   value: number | string;

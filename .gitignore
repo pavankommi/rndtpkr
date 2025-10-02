@@ -42,12 +42,10 @@ android.iml
 
 # Cocoapods
 #
-demo/ios/Pods
-example/ios/Pods
+ios/Pods
 
 # Ruby
-demo/vendor/
-example/vendor/
+vendor/
 
 # node.js
 #
@@ -72,4 +70,4 @@ android/keystores/debug.keystore
 /lib/
 
 .env
-web-build
+web-buildcoverage/

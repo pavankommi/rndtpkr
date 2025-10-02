@@ -39,7 +39,6 @@ import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
 import duration from 'dayjs/plugin/duration';
 import { usePrevious } from './hooks/use-previous';
-import jalaliday from 'jalali-plugin-dayjs';
 
 dayjs.extend(localeData);
 dayjs.extend(relativeTime);
@@ -47,7 +46,6 @@ dayjs.extend(localizedFormat);
 dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.extend(duration);
-dayjs.extend(jalaliday);
 
 export interface DatePickerSingleProps extends DatePickerBaseProps {
   mode: 'single';
@@ -115,11 +113,29 @@ const DateTimePicker = (
     onMonthChange = () => {},
     onYearChange = () => {},
     use12Hours,
+    autoSystemFormat = false,
+    minuteStep,
+    enableLooping = true,
   } = props;
 
   dayjs.tz.setDefault(timeZone);
-  dayjs.calendar(calendar);
   dayjs.locale(locale);
+
+  // Auto-detect system time format if enabled
+  const effectiveUse12Hours = useMemo(() => {
+    if (autoSystemFormat && timePicker) {
+      try {
+        const { uses24HourClock } = require('react-native-localize');
+        return !uses24HourClock();
+      } catch (error) {
+        console.warn(
+          'react-native-localize not available, defaulting to use12Hours prop'
+        );
+        return use12Hours ?? false;
+      }
+    }
+    return use12Hours ?? false;
+  }, [autoSystemFormat, use12Hours, timePicker]);
 
   const prevTimezone = usePrevious(timeZone);
 
@@ -201,7 +217,7 @@ const DateTimePicker = (
       calendarView: initialCalendarView,
       currentDate: initialDate,
       currentYear: initialDate.year(),
-      isRTL: calendar === 'jalali' || I18nManager.isRTL,
+      isRTL: I18nManager.isRTL,
     };
   }, [
     mode,
@@ -276,7 +292,7 @@ const DateTimePicker = (
   useEffect(() => {
     const newState = {
       ...initialState,
-      isRTL: calendar === 'jalali' || I18nManager.isRTL,
+      isRTL: I18nManager.isRTL,
     };
 
     dispatch({ type: CalendarActionKind.RESET_STATE, payload: newState });
@@ -633,7 +649,9 @@ const DateTimePicker = (
       disableYearPicker,
       style,
       className,
-      use12Hours,
+      use12Hours: effectiveUse12Hours,
+      minuteStep,
+      enableLooping,
     }),
     [
       mode,
@@ -663,7 +681,9 @@ const DateTimePicker = (
       disableYearPicker,
       style,
       className,
-      use12Hours,
+      effectiveUse12Hours,
+      minuteStep,
+      enableLooping,
     ]
   );
 

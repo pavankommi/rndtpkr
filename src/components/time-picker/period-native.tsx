@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import WheelPicker from './wheel-picker';
 import { ClassNames, PickerOption, Styles } from '../../types';
-import { isEqual } from 'lodash';
+import { dequal as isEqual } from 'dequal';
 
 interface PeriodProps {
   value: string;
