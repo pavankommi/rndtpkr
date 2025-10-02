@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/pavankommi/rndtpkr/compare/v3.1.3...v4.0.0) (2025-10-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* optimize package and establish rndtpkr identity
+
+### Features
+
+* optimize package and establish rndtpkr identity ([e2611c7](https://github.com/pavankommi/rndtpkr/commit/e2611c71432654d14b573d4e1cd609227cc5caa1))
+
 ## [3.1.3](https://github.com/pavankommi/rndtpkr/compare/v3.1.2...v3.1.3) (2025-10-02)
 
 
