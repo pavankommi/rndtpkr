@@ -70,4 +70,5 @@ android/keystores/debug.keystore
 /lib/
 
 .env
-web-buildcoverage/
+web-build
+coverage/
