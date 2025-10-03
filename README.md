@@ -1,7 +1,7 @@
 # rndtpkr
 
 Fork of [react-native-ui-datepicker](https://github.com/farhoudshapouran/react-native-ui-datepicker).
-Everything it does, just lighter and better.
+does everything it does, just lighter and better.
 
 **~49% smaller** (4.85 MB lighter) 🎉
 
