@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.2](https://github.com/pavankommi/rndtpkr/compare/v4.0.1...v4.0.2) (2025-10-03)
+
+
+### Bug Fixes
+
+* update README ([e04cb5f](https://github.com/pavankommi/rndtpkr/commit/e04cb5f7d3a6efdf9d5608bc807e8ee3ffaff09b))
+* use text chevrons ‹ › instead of SVG icons ([3a9e53b](https://github.com/pavankommi/rndtpkr/commit/3a9e53baeb655dfe41c5588500d6723e11177199))
+
 ## [4.0.1](https://github.com/pavankommi/rndtpkr/compare/v4.0.0...v4.0.1) (2025-10-02)
 
 
