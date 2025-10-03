@@ -20,10 +20,7 @@ type PrevButtonProps = {
   imageClassName?: ClassNames[UI.button_prev_image];
 };
 
-const PrevButton = ({
-  style,
-  className,
-}: PrevButtonProps) => {
+const PrevButton = ({ style, className }: PrevButtonProps) => {
   const {
     currentYear,
     calendarView,

@@ -20,10 +20,7 @@ type NextButtonProps = {
   imageClassName?: ClassNames[UI.button_next_image];
 };
 
-const NextButton = ({
-  style,
-  className,
-}: NextButtonProps) => {
+const NextButton = ({ style, className }: NextButtonProps) => {
   const {
     currentYear,
     onChangeMonth,

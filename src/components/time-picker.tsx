@@ -72,6 +72,14 @@ const TimePicker = () => {
 
   const { hour, hour12, minute, period } = getParsedDate(date || currentDate);
 
+  // Only enable looping for wheels with enough options (10+)
+  // Hours: 24 or 12 options → loop ✅
+  // Minutes (no step): 60 options → loop ✅
+  // Minutes (step=15): 4 options → no loop ❌
+  // Minutes (step=30): 2 options → no loop ❌
+  const shouldLoopHours = enableLooping && hours.length >= 10;
+  const shouldLoopMinutes = enableLooping && minutes.length >= 10;
+
   const handleChangeHour = useCallback(
     (value: number) => {
       let hour24 = value;
@@ -147,7 +155,7 @@ const TimePicker = () => {
             setValue={handleChangeHour}
             styles={styles}
             classNames={classNames}
-            enableLooping={enableLooping}
+            enableLooping={shouldLoopHours}
           />
         </View>
         <Text style={timePickerTextStyle} className={classNames?.time_label}>
@@ -160,7 +168,7 @@ const TimePicker = () => {
             setValue={handleChangeMinute}
             styles={styles}
             classNames={classNames}
-            enableLooping={enableLooping}
+            enableLooping={shouldLoopMinutes}
           />
         </View>
       </View>
