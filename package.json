@@ -1,6 +1,6 @@
 {
   "name": "rndtpkr",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "Lightweight React Native date/time picker with auto system format, looping wheels, and minute stepping",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

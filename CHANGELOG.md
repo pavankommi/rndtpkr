@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.3](https://github.com/pavankommi/rndtpkr/compare/v4.0.2...v4.0.3) (2025-10-03)
+
+
+### Bug Fixes
+
+* smart looping implemented with threshold ([f5a7823](https://github.com/pavankommi/rndtpkr/commit/f5a782381995081bea76bbb5989bef7f8102dd91))
+* smart looping implemented with threshold ([1922f49](https://github.com/pavankommi/rndtpkr/commit/1922f49f1f94a0177e2aef346e8774d89080f1aa))
+
 ## [4.0.2](https://github.com/pavankommi/rndtpkr/compare/v4.0.1...v4.0.2) (2025-10-03)
 
 
