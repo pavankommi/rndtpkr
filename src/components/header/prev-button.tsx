@@ -1,9 +1,8 @@
 import React, { memo, useCallback, useMemo } from 'react';
 import {
-  Image,
-  ImageStyle,
   Pressable,
   StyleSheet,
+  Text,
   useColorScheme,
   View,
 } from 'react-native';
@@ -14,8 +13,6 @@ import { UI } from '../../ui';
 import { dequal as isEqual } from 'dequal';
 import { COLORS } from '../../theme';
 
-const arrow_left = require('../../assets/images/left-chevron-svgrepo-com.svg');
-
 type PrevButtonProps = {
   style?: Styles[UI.button_prev];
   imageStyle?: Styles[UI.button_prev_image];
@@ -25,9 +22,7 @@ type PrevButtonProps = {
 
 const PrevButton = ({
   style,
-  imageStyle,
   className,
-  imageClassName,
 }: PrevButtonProps) => {
   const {
     currentYear,
@@ -55,15 +50,6 @@ const PrevButton = ({
     }
   }, [calendarView, currentYear, onChangeMonth, onChangeYear]);
 
-  const iconStyle: ImageStyle = useMemo(
-    () => ({
-      ...defaultStyles.icon,
-      tintColor: COLORS[theme].foreground,
-      ...(imageStyle as ImageStyle),
-    }),
-    [imageStyle, theme, defaultStyles.icon]
-  );
-
   return (
     <Pressable
       disabled={calendarView === 'time'}
@@ -77,11 +63,9 @@ const PrevButton = ({
         className={className}
       >
         {components.IconPrev || (
-          <Image
-            source={arrow_left}
-            style={iconStyle}
-            className={imageClassName}
-          />
+          <Text style={{ color: COLORS[theme].foreground, fontSize: 20 }}>
+            ‹
+          </Text>
         )}
       </View>
     </Pressable>

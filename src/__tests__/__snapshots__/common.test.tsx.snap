@@ -75,25 +75,16 @@ exports[`COMMON TESTS should render with default options 1`] = `
             ]
           }
         >
-          <Image
-            source={
-              {
-                "testUri": "../../../src/assets/images/left-chevron-svgrepo-com.svg",
-              }
-            }
+          <Text
             style={
               {
-                "height": 14,
-                "tintColor": "hsl(240 10% 3.9%)",
-                "transform": [
-                  {
-                    "rotate": "0deg",
-                  },
-                ],
-                "width": 14,
+                "color": "hsl(240 10% 3.9%)",
+                "fontSize": 20,
               }
             }
-          />
+          >
+            ‹
+          </Text>
         </View>
       </View>
       <View
@@ -259,25 +250,16 @@ exports[`COMMON TESTS should render with default options 1`] = `
             ]
           }
         >
-          <Image
-            source={
-              {
-                "testUri": "../../../src/assets/images/right-chevron-svgrepo-com.svg",
-              }
-            }
+          <Text
             style={
               {
-                "height": 14,
-                "tintColor": "hsl(240 10% 3.9%)",
-                "transform": [
-                  {
-                    "rotate": "0deg",
-                  },
-                ],
-                "width": 14,
+                "color": "hsl(240 10% 3.9%)",
+                "fontSize": 20,
               }
             }
-          />
+          >
+            ›
+          </Text>
         </View>
       </View>
     </View>
