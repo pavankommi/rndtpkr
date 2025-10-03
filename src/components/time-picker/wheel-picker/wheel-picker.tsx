@@ -10,7 +10,6 @@ import {
   ViewProps,
   FlatListProps,
   FlatList,
-  Platform,
 } from 'react-native';
 import styles from './wheel-picker.style';
 import WheelPickerItem from './wheel-picker-item';
@@ -126,21 +125,26 @@ const WheelPicker: React.FC<Props> = ({
 
   // Seed position on mount using offset (more reliable than initialScrollIndex)
   useEffect(() => {
-    if (enableLooping) {
-      flatListRef.current?.scrollToOffset({
-        offset: initialOffset,
-        animated: false,
-      });
-    } else {
-      flatListRef.current?.scrollToIndex({
-        index: baseSelectedIndex,
-        animated: Platform.OS === 'ios',
-      });
-    }
-    // Mark as emitted after initial scroll to prevent onChange on mount
-    setTimeout(() => {
-      hasEmittedRef.current = true;
-    }, 100);
+    // Small delay to ensure FlatList is fully mounted
+    const timer = setTimeout(() => {
+      if (enableLooping) {
+        flatListRef.current?.scrollToOffset({
+          offset: initialOffset,
+          animated: false,
+        });
+      } else {
+        flatListRef.current?.scrollToIndex({
+          index: baseSelectedIndex,
+          animated: false,
+        });
+      }
+      // Mark as emitted after initial scroll to prevent onChange on mount
+      setTimeout(() => {
+        hasEmittedRef.current = true;
+      }, 100);
+    }, 10);
+
+    return () => clearTimeout(timer);
   }, [initialOffset, baseSelectedIndex, enableLooping]);
 
   const handleScrollEnd = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
@@ -237,6 +241,7 @@ const WheelPicker: React.FC<Props> = ({
         onMomentumScrollEnd={handleMomentumScrollEnd}
         snapToOffsets={offsets}
         decelerationRate={decelerationRate}
+        initialScrollIndex={enableLooping ? initialTopIndex : baseSelectedIndex}
         getItemLayout={(_, index) => ({
           length: itemHeight,
           offset: itemHeight * index,
