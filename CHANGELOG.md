@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.4](https://github.com/pavankommi/rndtpkr/compare/v4.0.3...v4.0.4) (2025-10-03)
+
+
+### Bug Fixes
+
+* ensure correct initial scroll behavior ([cbb5b04](https://github.com/pavankommi/rndtpkr/commit/cbb5b0476aa7008c6a2dd57db8be0fef1fb7a043))
+* ensure correct initial scroll behavior ([7e9aa75](https://github.com/pavankommi/rndtpkr/commit/7e9aa75ce2e8f395db29d4d801dd2fe364e55faa))
+
 ## [4.0.3](https://github.com/pavankommi/rndtpkr/compare/v4.0.2...v4.0.3) (2025-10-03)
 
 
